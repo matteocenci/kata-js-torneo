@@ -30,3 +30,12 @@ const weapons = [
 
 
 ]
+
+// Copio gli array
+
+let fightersCopy = [...fighters];
+let weaponsCopy = [...weapons];
+
+// Metodo dei numeri casuali
+
+const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
