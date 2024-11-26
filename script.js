@@ -36,6 +36,31 @@ const weapons = [
 let fightersCopy = [...fighters];
 let weaponsCopy = [...weapons];
 
+console.log(fightersCopy);
+console.log(weaponsCopy);
+
+
+
 // Metodo dei numeri casuali
 
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+
+
+// Milestone 1: scelta dell'arma
+
+fightersCopy = fightersCopy.map(fighter => {
+    const weaponIndex = getRandomInt(0, weaponsCopy.length - 1);
+    console.log("Arma selezionata indice", weaponIndex);
+    
+    const weapon = weaponsCopy.splice(weaponIndex, 1)[0];  //rimuove l'arma scelta
+    console.log("Arma selezionata", weapon);
+    
+    return {
+        ...fighter,
+        weapon: weapon.name,
+        power: fighter.power + weapon.power //aggiunge il potere dell'arma
+    };
+});
+
+console.log("Prima fase - Combattenti con arma scelta", fightersCopy);
