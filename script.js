@@ -64,3 +64,19 @@ fightersCopy = fightersCopy.map(fighter => {
 });
 
 console.log("Prima fase - Combattenti con arma scelta", fightersCopy);
+
+// Milestone 2: Allenamento
+
+
+fightersCopy = fighters.map(fighter => {
+    const trainingMultiplier = getRandomInt(1, 100);
+    return {
+        ...fighter,
+        power: fighter.power * trainingMultiplier //aggiunge la potenza con l'allenamento
+
+    };
+});
+
+console.log("Seconda fase - Combattenti dopo l'allenamento", fightersCopy);
+
+
