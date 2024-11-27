@@ -85,5 +85,12 @@ console.log("Seconda fase - Combattenti dopo l'allenamento", fightersCopy);
 fightersCopy = fightersCopy.filter(fighter => fighter.power >= 2000); //Questa riga filtra chi ha meno di 2000 di potere
 console.log("Fase 3 -  Combattenti qualificati", fightersCopy);
 
+// Milestone 4: Combattimento
+// Aggiungiamo un robot se il numero dei partecipanti è dispari 
 
+if (fightersCopy.length % 2 !== 0) {
+    fightersCopy.push({name: 'Robot', power: 4000, weapon: 'N/A'});
+    console.log('Robot aggiunto per regolare il combattimento');
+    
+}
 
