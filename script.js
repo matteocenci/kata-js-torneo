@@ -80,3 +80,10 @@ fightersCopy = fighters.map(fighter => {
 console.log("Seconda fase - Combattenti dopo l'allenamento", fightersCopy);
 
 
+// Milestone 3: Qualificazione 
+
+fightersCopy = fightersCopy.filter(fighter => fighter.power >= 2000); //Questa riga filtra chi ha meno di 2000 di potere
+console.log("Fase 3 -  Combattenti qualificati", fightersCopy);
+
+
+
